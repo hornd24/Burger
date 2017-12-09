@@ -1,7 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
-var port = 6645;
+var port =process.env.port || 6645;
 
 var app = express();
 
@@ -22,3 +22,4 @@ var routes = require("./controllers/catsController.js");
 app.use("/", routes);
 
 app.listen(port);
+console.log('listing on')
