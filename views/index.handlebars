@@ -1,0 +1,100 @@
+
+
+
+	<div class="container">
+  <div class="row">
+    <div class="col-sm">
+ 
+    </div>
+    <div class="col-sm">
+      <h1>Welcome To Bob's</h1>
+    </div>
+    <div class="col-sm">
+     
+    </div>
+  </div>
+
+<div class='row'>
+  <div class='col-sm'>
+<table class="table">
+<h1>Eat A Wonderful Burger</h1>
+  <thead>
+    <tr>
+    
+      <th scope="col">Burger Name</th>
+      
+    </tr>
+    </thead>
+  <tbody> 
+  {{#each burgers}}
+  <tr>
+    
+  <td>{{#unless devoured}}
+    {{burger_name}}</td>
+  
+   {{> burgers/burger-button devoured=true}}
+  {{/unless}}
+  {{/each}}
+  
+    </tr>
+ </tbody>
+</table>
+  </div>
+<div class='col-sm'>
+
+</div>
+<div class="col-sm">
+<table class="table">
+  <h1>Buy Aagin?</h1>
+  <thead>
+    <tr>
+    
+      <th scope="col">Burger name</th>
+      
+    </tr>
+    </thead>
+  <tbody>
+     
+  {{#each burgers}}
+  <tr>
+   
+  <td> {{#if devoured}}
+    {{burger_name}}</td>
+   
+   {{> burgers/burger-button devoured=false }}
+  {{/if}}
+  {{/each}}
+   
+    </tr>
+ </tbody>
+</table>
+  </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+   
+    </div>
+    <div class="col-sm-6">
+      <h2>Add A New Burger</h2>
+
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="bur" name="name">
+    <button  id='submit'>Add Burger</button>
+  </div>
+  
+
+    </div>
+    <div class="col-sm-3">
+     
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+</div>
