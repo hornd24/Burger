@@ -26,7 +26,7 @@ router.post("/api/burger", function(req, res) {
     req.body.burger_name,false
   ], function(result) {
     // Send back the ID of the new quote
-    res.json('fuck you' );
+    res.json(result );
   });
 });
 
