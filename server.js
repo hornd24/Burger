@@ -1,10 +1,10 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
-var port =process.env.PORT || 8080;
+
 
 var app = express();
-
+var PORT = process.env.PORT || 3000;
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
@@ -21,5 +21,5 @@ var routes = require("./controllers/catsController.js");
 
 app.use("/", routes);
 
-app.listen(port);
+app.listen(PORT);
 console.log('listing on')

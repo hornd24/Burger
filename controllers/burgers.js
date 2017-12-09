@@ -21,7 +21,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burger", function(req, res) {
-  console.log('i am inside the posting bitch')
+  
   burgers.create([
     req.body.burger_name,false
   ], function(result) {
